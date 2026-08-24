@@ -75,11 +75,11 @@
     .capability-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:34px;border:1px solid var(--border-soft);border-radius:var(--radius);overflow:hidden;background:var(--border-soft)}.capability{min-height:144px;padding:21px;background:var(--carbon);color:var(--mist);display:flex;flex-direction:column;justify-content:flex-start}.capability strong{display:block;margin-bottom:8px;color:var(--snow);font-weight:590}
 
     .education-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px}
-    .education-card{display:grid;grid-template-columns:144px minmax(0,1fr);gap:34px;align-items:center;min-height:233px;padding:34px 34px 34px 21px;border:1px solid var(--border-soft);border-radius:var(--radius);background:var(--carbon);overflow:hidden}
-    .education-brand-lockup{width:144px;display:grid;gap:13px;align-items:center;justify-items:center}
-    .education-logo{width:144px;height:144px;object-fit:contain;object-position:center;filter:drop-shadow(0 13px 21px rgba(0,0,0,.16));transition:transform .28s cubic-bezier(.22,1,.36,1)}
-    .education-logo.cubs-logo{width:144px;height:89px}
-    .education-card:hover .education-logo{transform:scale(1.045)}
+    .education-card{position:relative;display:grid;grid-template-columns:144px minmax(0,1fr);gap:34px;align-items:center;min-height:233px;padding:34px 34px 34px 21px;border:1px solid var(--border-soft);border-radius:var(--radius);background:var(--carbon);overflow:hidden}
+    .education-brand-lockup{width:144px;display:block}
+    .education-logo{width:144px;height:144px;object-fit:contain;object-position:center;filter:drop-shadow(0 13px 21px rgba(0,0,0,.16));transition:transform .28s cubic-bezier(.22,1,.36,1),opacity .28s ease}
+    .education-logo.cubs-logo{position:absolute;top:21px;right:21px;width:89px;height:55px;opacity:.42;filter:drop-shadow(0 8px 13px rgba(0,0,0,.10))}
+    .education-card:hover .education-logo:not(.cubs-logo){transform:scale(1.045)}.education-card:hover .cubs-logo{opacity:.52}
     .education-school{margin:4px 0 0;color:var(--fog);font-size:13px;font-weight:500}.education-qualification{margin:8px 0 0;color:var(--snow);font-weight:500}.education-detail{margin:13px 0 0;max-width:377px;color:var(--mist)}
 
     .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid var(--border-soft);border-radius:var(--radius);overflow:hidden;background:var(--border-soft)}
@@ -107,7 +107,7 @@
       .hero{min-height:70svh;background-position:62% center}.hero-grid{grid-template-columns:1fr}.profile-layout,.case-body,.contact-grid{grid-template-columns:1fr}.profile-layout{gap:34px}.profile-image{max-width:610px}.education-list{grid-template-columns:1fr}.experience-item{grid-template-columns:1fr;gap:21px}.method-grid{grid-template-columns:repeat(2,1fr)}.section{padding:55px 0}.case-header{grid-template-columns:1fr}.case-header>.pill{justify-self:start}.contact-grid{gap:55px}.contact-links{min-width:0;max-width:610px}
     }
     @media(max-width:610px){
-      :root{--pad:21px}.hero{padding:55px 0;background-position:64% center}.hero h1{font-size:clamp(42px,13vw,55px)}.lede{margin-top:21px}.section-head{margin-bottom:34px}.method-grid,.capability-list{grid-template-columns:1fr}.method{min-height:0;padding:21px}.method-number{margin-bottom:21px}.education-card{grid-template-columns:89px minmax(0,1fr);gap:21px;min-height:0;padding:21px}.education-brand-lockup{width:89px;gap:8px}.education-logo{width:89px;height:89px}.education-logo.cubs-logo{width:89px;height:55px}.case-title,.org{grid-template-columns:89px minmax(0,1fr);gap:21px}.case-logo,.org-logo{width:89px;height:89px}.case-header,.case-narrative{padding:21px}.section{padding:55px 0}.footer-row{display:grid}.actions .pill,.actions .ghost{width:100%}.ghost{text-align:center}.experience-item{padding:21px 0}.contact-grid{gap:34px}
+      :root{--pad:21px}.hero{padding:55px 0;background-position:64% center}.hero h1{font-size:clamp(42px,13vw,55px)}.lede{margin-top:21px}.section-head{margin-bottom:34px}.method-grid,.capability-list{grid-template-columns:1fr}.method{min-height:0;padding:21px}.method-number{margin-bottom:21px}.education-card{grid-template-columns:89px minmax(0,1fr);gap:21px;min-height:0;padding:21px}.education-brand-lockup{width:89px}.education-logo{width:89px;height:89px}.education-logo.cubs-logo{top:13px;right:13px;width:55px;height:34px}.case-title,.org{grid-template-columns:89px minmax(0,1fr);gap:21px}.case-logo,.org-logo{width:89px;height:89px}.case-header,.case-narrative{padding:21px}.section{padding:55px 0}.footer-row{display:grid}.actions .pill,.actions .ghost{width:100%}.ghost{text-align:center}.experience-item{padding:21px 0}.contact-grid{gap:34px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}[data-reveal]{opacity:1;transform:none}}
   </style>
