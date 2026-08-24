@@ -76,8 +76,11 @@
 
     .education-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px}
     .education-card{display:grid;grid-template-columns:144px minmax(0,1fr);gap:34px;align-items:center;min-height:233px;padding:34px 34px 34px 21px;border:1px solid var(--border-soft);border-radius:var(--radius);background:var(--carbon);overflow:hidden}
-    .education-logo{width:144px;height:144px;object-fit:contain;object-position:center;filter:drop-shadow(0 13px 21px rgba(0,0,0,.16));transition:transform .28s cubic-bezier(.22,1,.36,1)}.education-card:hover .education-logo{transform:scale(1.045)}
-    .education-qualification{margin:8px 0 0;color:var(--snow);font-weight:500}.education-detail{margin:13px 0 0;max-width:377px;color:var(--mist)}
+    .education-brand-lockup{width:144px;display:grid;gap:13px;align-items:center;justify-items:center}
+    .education-logo{width:144px;height:144px;object-fit:contain;object-position:center;filter:drop-shadow(0 13px 21px rgba(0,0,0,.16));transition:transform .28s cubic-bezier(.22,1,.36,1)}
+    .education-logo.cubs-logo{width:144px;height:89px}
+    .education-card:hover .education-logo{transform:scale(1.045)}
+    .education-school{margin:4px 0 0;color:var(--fog);font-size:13px;font-weight:500}.education-qualification{margin:8px 0 0;color:var(--snow);font-weight:500}.education-detail{margin:13px 0 0;max-width:377px;color:var(--mist)}
 
     .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid var(--border-soft);border-radius:var(--radius);overflow:hidden;background:var(--border-soft)}
     .method{min-height:233px;padding:34px 21px;background:var(--carbon)}.method-number{display:block;margin-bottom:34px;font-family:var(--mono);font-size:12px;color:var(--fog)}.method p{margin:13px 0 0;color:var(--mist)}
@@ -104,7 +107,7 @@
       .hero{min-height:70svh;background-position:62% center}.hero-grid{grid-template-columns:1fr}.profile-layout,.case-body,.contact-grid{grid-template-columns:1fr}.profile-layout{gap:34px}.profile-image{max-width:610px}.education-list{grid-template-columns:1fr}.experience-item{grid-template-columns:1fr;gap:21px}.method-grid{grid-template-columns:repeat(2,1fr)}.section{padding:55px 0}.case-header{grid-template-columns:1fr}.case-header>.pill{justify-self:start}.contact-grid{gap:55px}.contact-links{min-width:0;max-width:610px}
     }
     @media(max-width:610px){
-      :root{--pad:21px}.hero{padding:55px 0;background-position:64% center}.hero h1{font-size:clamp(42px,13vw,55px)}.lede{margin-top:21px}.section-head{margin-bottom:34px}.method-grid,.capability-list{grid-template-columns:1fr}.method{min-height:0;padding:21px}.method-number{margin-bottom:21px}.education-card{grid-template-columns:89px minmax(0,1fr);gap:21px;min-height:0;padding:21px}.education-logo{width:89px;height:89px}.case-title,.org{grid-template-columns:89px minmax(0,1fr);gap:21px}.case-logo,.org-logo{width:89px;height:89px}.case-header,.case-narrative{padding:21px}.section{padding:55px 0}.footer-row{display:grid}.actions .pill,.actions .ghost{width:100%}.ghost{text-align:center}.experience-item{padding:21px 0}.contact-grid{gap:34px}
+      :root{--pad:21px}.hero{padding:55px 0;background-position:64% center}.hero h1{font-size:clamp(42px,13vw,55px)}.lede{margin-top:21px}.section-head{margin-bottom:34px}.method-grid,.capability-list{grid-template-columns:1fr}.method{min-height:0;padding:21px}.method-number{margin-bottom:21px}.education-card{grid-template-columns:89px minmax(0,1fr);gap:21px;min-height:0;padding:21px}.education-brand-lockup{width:89px;gap:8px}.education-logo{width:89px;height:89px}.education-logo.cubs-logo{width:89px;height:55px}.case-title,.org{grid-template-columns:89px minmax(0,1fr);gap:21px}.case-logo,.org-logo{width:89px;height:89px}.case-header,.case-narrative{padding:21px}.section{padding:55px 0}.footer-row{display:grid}.actions .pill,.actions .ghost{width:100%}.ghost{text-align:center}.experience-item{padding:21px 0}.contact-grid{gap:34px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}[data-reveal]{opacity:1;transform:none}}
   </style>
@@ -173,8 +176,11 @@
         <div class="section-head" data-reveal><div class="section-intro"><h2>Education grounded in business and technology.</h2><p>My academic background combines business systems, software and practical problem solving.</p></div></div>
         <div class="education-list">
           <article class="education-card" data-reveal>
-            <img class="education-logo" src="assets/images/UCC.png" alt="University College Cork logo" width="180" height="180">
-            <div><h3>University College Cork</h3><p class="education-qualification">BSc Business Information Systems, First Class Honours</p><p class="education-detail">University study spanning software development, information systems, data, business analysis and the organisational use of technology.</p></div>
+            <div class="education-brand-lockup" aria-label="University College Cork and Cork University Business School">
+              <img class="education-logo" src="assets/images/UCC.png" alt="University College Cork logo" width="180" height="180">
+              <img class="education-logo cubs-logo" src="assets/images/CUBS.png" alt="Cork University Business School logo" width="180" height="112">
+            </div>
+            <div><h3>University College Cork</h3><p class="education-school">Cork University Business School</p><p class="education-qualification">BSc Business Information Systems, First Class Honours</p><p class="education-detail">University study spanning software development, information systems, data, business analysis and the organisational use of technology.</p></div>
           </article>
           <article class="education-card" data-reveal>
             <img class="education-logo" src="assets/images/CBC.png" alt="Christian Brothers College logo" width="180" height="180">
